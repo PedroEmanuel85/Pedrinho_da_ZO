@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Camila, meu amor</title>
+        <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body { font-family: "Quicksand", sans-serif; background-color: #fce4ec; text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; }
+            .instruction { font-size: 1.6rem; color: rgba(255, 0, 0, 0.7); margin-bottom: 20px; }
+            .container { position: relative; text-align: center; }
+            .heart { display: inline-block; cursor: pointer; transition: transform 0.3s ease-in-out; }
+            .heart img { width: 100px; animation: beat 1.5s infinite ease-in-out; }
+            .message { display: none; width: 80%; max-width: 550px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); margin-top: 20px; font-size: 18px; line-height: 1.5; }
+            .sincere { font-weight: bold; margin-top: 10px; }
+            @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <p class="instruction">Se clicar no coração tá me devendo uma rapidinha</p>
+            <div class="heart">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" alt="heart">
+            </div>
+            <div class="message">
+                <h1>Camila,</h1>
+                <p>Se amor fosse um código, o meu por você estaria rodando em loop infinito (nunca para). Olha, meu amor, EU TE AMO! Sei que sempre falo isso, mas ter te conhecido foi a melhor coisa que me aconteceu. Você é incrível de todas as maneiras, desde seu jeito único, suas piadas, a maneira como encara os desafios. Eu admiro tudo em você.</p>
+                <p>Estar com você foi o melhor presente que Deus me deu. Você me traz paz, felicidade e muito mais. Isso é apenas mais uma declaração boba que faço para você. Você é perfeita em todos os detalhes. Você é meu backup favorito, porque sem você eu estaria perdido. Te amo. 💖</p>
+                <p class="sincere">Assinado,Pedrinho_da_ZO</p>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".heart").on("click", function() {
+                    $(".message").fadeToggle(500);
+                });
+            });
+        </script>
+    </body>
+</html>
